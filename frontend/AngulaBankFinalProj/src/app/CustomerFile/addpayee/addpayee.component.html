@@ -1,0 +1,27 @@
+<div class="col-md-6 offset-md-3">
+
+
+    <h3> Add Payee</h3>
+
+    
+    <form #postData="ngForm" (ngSubmit)="addPayeeHandler(postData.value)">
+
+
+        <div class="form-group"> <label>Payee AccountNumber: </label>
+            <input type="number"  required #payeeAccNo="ngModel" class="form-control" name="payeeAccNo" ngModel>
+            <span *ngIf="payeeAccNo.invalid && payeeAccNo.touched" style="color: red;">Please enter Payee Account Number</span><br>
+        </div>
+
+        <div class="form-group"> <label>Payee Name : </label>
+            <input type="text"  required #payeeNamee="ngModel" class="form-control" name="payeeNamee" ngModel>
+            <span *ngIf="payeeNamee.invalid && payeeNamee.touched" style="color: red;">Please enter Payee Name</span><br>
+        </div>
+
+        <button class="btn btn-primary" [disabled]="postData.invalid">Add Payee</button>
+    </form>
+    
+</div>
+
+<footer>
+    <div>© Copyright Monocept- 2021 | All Rights Reserved </div>
+</footer>

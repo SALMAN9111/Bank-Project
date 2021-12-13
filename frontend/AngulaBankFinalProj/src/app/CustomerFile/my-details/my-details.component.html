@@ -1,0 +1,61 @@
+<html>
+
+<head>
+</head>
+<style>
+    tr:nth-child(even),
+    table.list thead>tr {
+        background-color: #dddddd;
+    }
+
+    h2 {
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h2> MyDetails</h2>
+        <hr>
+        <table class="table table-hover">
+
+            <tr>
+                <th>Account Number</th>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Email Id</th>
+                <th>Address</th>
+                <th>Occupation</th>
+                <th>Account Status</th>
+                <th>Edit Details</th>
+                <th>Change Password</th>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>{{myDetails.accountNumber}}</td>
+                    <td>{{myDetails.custName}}</td>
+                    <td>{{myDetails.custBalance}}</td>
+                    <td>{{myDetails.custEmail}}</td>
+                    <td>{{myDetails.custAddress}}</td>
+                    <td>{{myDetails.custOccupation}}</td>
+                    <td>{{myDetails.accountStatus}}</td>
+                    <td><button class="btn btn-info"> <a
+                                [routerLink]="['/customer',myDetails.accountNumber,'edit']">Edit Details</a>
+                        </button></td>
+                    <td><button class="btn btn-info" style="margin-left: 10px;"> <a
+                                [routerLink]="['/customer',myDetails.accountNumber,'changepassword']">Change
+                                Password</a>
+                        </button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<footer>
+    <div>© Copyright Monocept- 2021 | All Rights Reserved </div>
+</footer>

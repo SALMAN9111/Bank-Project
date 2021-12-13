@@ -1,0 +1,70 @@
+<html>
+
+<head>
+
+</head>
+<style>
+    tr:nth-child(even),
+    table.list thead>tr {
+        background-color: #dddddd;
+    }
+
+    h2 {
+        text-align: center;
+    }
+</style>
+
+
+
+
+<body>
+
+        <h2> Number of Customers = {{customers.length}}</h2>
+
+        <hr>
+        <table class="table table-hover">
+
+            <tr>
+                <th>Account Number</th>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Phone Number</th>
+                <th>Email Id</th>
+                <th>Address</th>
+                <th>Occupation</th>
+                <th>Account Status</th>
+                <th>Transaction</th>
+                <th>Change Status</th>
+            </tr>
+
+            <tbody>
+                <tr *ngFor="let customer of customers">
+
+                    <td>{{customer.accountNumber}}</td>
+                    <td>{{customer.custName}}</td>
+                    <td>{{customer.custBalance}}</td>
+                    <td>{{customer.custPhoneNo}}</td>
+                    <td>{{customer.custEmail}}</td>
+                    <td>{{customer.custAddress}}</td>
+                    <td>{{customer.custOccupation}}</td>
+                    <td>{{customer.accountStatus}}</td>
+                    <td><button class="btn btn-info" style="margin-left: 10px;"> <a
+                                [routerLink]="['/employee',customer.accountNumber]">Transaction</a>
+                        </button></td>
+                    <td><button class="btn btn-info" style="margin-left: 10px;"> <a
+                                [routerLink]="['/employee',customer.accountNumber,'changeStatus']">ChangeStatus</a>
+                        </button></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+    
+</body>
+
+
+</html>
+<footer>
+    <div>© Copyright Monocept- 2021 | All Rights Reserved </div>
+</footer>

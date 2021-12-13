@@ -1,0 +1,21 @@
+<div class="col-md-6 offset-md-3">
+
+    <div class="container">
+        <form #transaction="ngForm" (ngSubmit)="transactionHandler(transaction.value)">
+            Amount : <input type="number" required #amount="ngModel" name="amount" ngModel> <br>
+            <span *ngIf="amount.invalid && amount.touched" style="color: red;">Please enter Amount</span><br>
+
+
+            <p>
+                <input type="radio" required #tarnsac="ngModel" name="tarnsac" value="deposit" ngModel> Deposit
+            </p>
+            <p>
+                <input type="radio" required #tarnsac="ngModel" name="tarnsac" value="withdraw" ngModel> Withdraw
+            </p>
+            <span *ngIf="tarnsac.invalid && tarnsac.touched" style="color: red;">Select Status</span><br>
+            <button class="btn btn-primary" [disabled]="transaction.invalid">Do Transaction</button>
+        </form>
+    </div>
+    <footer>
+        <div>© Copyright Monocept- 2021 | All Rights Reserved </div>
+    </footer>

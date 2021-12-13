@@ -1,0 +1,17 @@
+.panel-body{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    min-width: 40%;
+    border-radius: 5px;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:orangered;
+    color: white;
+    text-align: center;
+  }

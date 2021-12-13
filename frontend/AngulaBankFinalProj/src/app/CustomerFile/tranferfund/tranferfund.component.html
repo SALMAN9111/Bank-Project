@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+</head>
+<style>
+    tr:nth-child(even),
+    table.list thead>tr {
+        background-color: #dddddd;
+    }
+
+    h2 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="col-md-6 offset-md-3">
+
+     
+        <h2> Payees</h2>
+        <hr>
+        <table class="table table-hover">
+
+            <tr>
+                <th>Account Number</th>
+                <th>Name</th>
+                <th>transfer</th>
+            </tr>
+
+            <tbody>
+                <tr *ngFor="let payee of payees">
+
+                    <td>{{payee.accountNumber}}</td>
+                    <td>{{payee.payeeName}}</td>
+                    <td><button class="btn btn-info" style="margin-left: 10px;" >  <a  [routerLink]="['/customer','payee',payee.accountNumber,'sendmoney']">Transfer fund</a>   
+                    </button></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</body>
+
+
+</html>
+<footer>
+    <div>© Copyright Monocept- 2021 | All Rights Reserved </div>
+</footer>

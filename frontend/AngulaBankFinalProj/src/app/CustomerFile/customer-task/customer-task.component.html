@@ -1,0 +1,30 @@
+<div class="container">
+  
+    <h2 id="welcome" style="color: orangered;">Welcome to Monocept Bank of India</h2>
+
+    <p align="right">
+      <button class="btn btn-primary" (click)="logoutHandler()">Logout</button>
+    </p>
+    <section>
+      <ul class="nav nav-pills">
+
+        <li> <a style="margin: 10px; font-size: large;" routerLink="/customer/details">MyDetails</a></li>
+        <li> <a style="margin: 10px; font-size: large;" routerLink="/customer/addPayee">Add Payee</a></li>
+        <li> <a style="margin: 10px; font-size: large;" routerLink="/customer/payees">My Payees</a></li>
+
+
+      </ul>
+
+      <section>
+    
+        <router-outlet></router-outlet>
+      </section>
+
+    </section>
+  
+</div>
+
+
+<footer>
+  <div>© Copyright Monocept- 2021 | All Rights Reserved </div>
+</footer>

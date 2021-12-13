@@ -1,0 +1,22 @@
+<p align="right">
+  <button class="btn btn-primary" (click)="logoutHandler()">Logout</button>
+</p>
+
+  <section>
+    <ul class="nav nav-pills">
+
+      <li> <a style="margin: 10px; font-size: large;" routerLink="/employee/viewAllCustomers">View All Customers</a></li>
+      <li> <a style="margin: 10px; font-size: large;" routerLink="/employee/addCustomer">Add Customer</a></li>
+
+
+    </ul>
+    <section>
+     
+      <router-outlet></router-outlet>
+    </section>
+
+  </section>
+
+<!-- <footer>
+  <div>© Copyright Monocept- 2021 | All Rights Reserved </div>
+</footer> -->

@@ -1,0 +1,13 @@
+<div class="col-md-6 offset-md-3">
+<form #changeStatus="ngForm" (ngSubmit)="changeAccStatusHandler(changeStatus.value)">
+ <h4>Change Customers Account Status</h4>
+    <p>
+        <input type="radio"  required #status="ngModel" name="status" value="ACTIVE" ngModel> Active
+    </p>
+    <p>
+        <input type="radio"  required #status="ngModel" name="status" value="INACTIVE" ngModel> Inactive
+    </p>
+    <button class="btn btn-primary" [disabled]="changeStatus.invalid">Change Status</button>
+</form>
+</div>
+
